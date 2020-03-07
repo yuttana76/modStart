@@ -15,7 +15,7 @@ server_validation.envChecking().then((rs)=>{
   process.exit(1) 
 })
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8080;
 
 app.set("port", PORT);
 
