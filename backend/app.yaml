@@ -1,6 +1,0 @@
-runtime: nodejs12
-
-# [START cloud_tasks_app_env_vars]
-env_variables:
-  PORT: 8080
-  ENV: "PROD env."

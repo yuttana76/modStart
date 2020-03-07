@@ -1,0 +1,14 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: backend/dist/index.html
+  upload: backend/dist/index.html
+- url: /
+  static_dir: backend/dist
+
+# [START cloud_tasks_app_env_vars]
+env_variables:
+  PORT: 8080
+  ENV: "PROD env."
