@@ -2,6 +2,7 @@
 
 # compiled output
 /backend/dist
+/backend/angular
 /tmp
 /out-tsc
 

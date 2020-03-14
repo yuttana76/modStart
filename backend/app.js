@@ -8,8 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/", express.static(path.join(__dirname, "dist")));
-app.use("/www", express.static(path.join(__dirname, "www/new-age")));
+app.use("/", express.static(path.join(__dirname, "angular")));
+// app.use("/dash", express.static(path.join(__dirname, "dash")));
+// app.use("/www", express.static(path.join(__dirname, "www/new-age")));
+// app.use("/", express.static(path.join(__dirname, "www/new-age")));
 
 // app.use("/", express.static(path.join(__dirname, "www/coming-soon")));
 // app.use("/images",express.static(path.join("backend/images")));
@@ -32,8 +34,10 @@ app.use((req, res, next) => {
     next();
   });
 
+  // app.use("/api/amc",amcRoutes);
+
 app.use((req, res, next) => {
     // res.sendFile(path.join(__dirname, "www", "index.html"));
-    res.sendFile(path.join(__dirname, "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "angular", "index.html"));
   });
   module.exports = app;
